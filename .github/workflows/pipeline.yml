@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-           name: Checkout
-           run: git clone  https://github.com/AdiDimi/TerraformTest.git
+      - name: Checkout
+        run: git clone  https://github.com/AdiDimi/TerraformTest.git
       #   uses: actions/checkout@v2
-           name: Print Hello World
-           run: echo "Hello World. GitHub Actions!" 
+      - name: Print Hello World
+        run: echo "Hello World. GitHub Actions!"
       # - name: Setup Terraform
       #   uses: hashicorp/setup-terraform@v1
       #   with:
