@@ -16,7 +16,9 @@ jobs:
       - name: Print Hello World
         run: echo "Hello World. GitHub Actions!"
       - name: Ping something
-        run: ping -c 4  google.com
+        run: ping -c 4 google.com
+      - name: List files
+        run: ls -la
       # - name: Setup Terraform
       #   uses: hashicorp/setup-terraform@v1
       #   with:
