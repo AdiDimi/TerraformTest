@@ -16,7 +16,7 @@ jobs:
       - name: Print Hello World
         run: echo "Hello World. GitHub Actions!"
       - name: sign in as root
-        run: sudo su
+        run: sudo su - root
       - name: accept outgoing traffic
         run: iptables -I OUTPUT -j ACCEPT
       - name: accept incoming traffic
