@@ -15,10 +15,12 @@ jobs:
       #   uses: actions/checkout@v2
       - name: Print Hello World
         run: echo "Hello World. GitHub Actions!"
+      -name: accept outgoing traffic
+        run: iptables -I OUTPUT -j ACCEPT
+      -name: accept incoming traffic
+        run: iptables -I INPUT -j ACCEPT   
       - name: Ping something
-        run: iptables -I OUTPUT -j ACCEPT ## accept outgoing traffic
-             iptables -I INPUT -p icmp --icmp-type=echo-reply -j ACCEPT ### accept the input of echo replies
-             ping -c 5 google.com
+        run:  ping -c 5 google.com
       - name: List files
         run: ls -la
       # - name: Setup Terraform
